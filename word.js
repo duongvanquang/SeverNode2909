@@ -7,7 +7,18 @@ const Word = mongoose.model('Word', {
     vn: {type : String , trim : true  , require : true , uppercase : true},
     isMemorized: {type : Boolean , default : false},
 });
-
-const kitty = new Word({ name: 'Zildjian' });
-kitty.save().then(() => console.log('meow'));
+// SELECT
+{/* Word.find ({})
+.then(words =>console.log(words))
+.catch(error => console.log(error)) */}
 //  Quang lRywitTUtOQFgquC
+// INSERT
+const word = new Word ({en:'two',vn:'mot'})
+word.save()
+.then(word => console.log(word))
+.catch(error => console.log(error))
+
+
+// UPDATE
+//word.findByIdAnUpdate()
+
